@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Change Calculator!</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    </head>
+    <body>
+        <div  ng-app='app' class="container">
+        <div ng-controller="CalculatorCtrl as calCtrl">
+        <h1>Change Calculator</h1>
+        <div class="well">
+            <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label>Amount Due</label>
+                    <input ng-model="calCtrl.owed" id="amountDue" type="text" class="form-control" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                <label>Amount Given</label>
+                <input ng-model='calCtrl.paid' id="paid" type="text" class="form-control" </div>
+            </div>
+            </div>
+            <button ng-click="calCtrl.click()" id="clicker" class="btn btn-primary text-center center-block">Calculate</button>
+        </div>
+        <div class="well text-center">
+            <h1>Dollars</h1>
+            <p id="dollars" class="lead">{{calCtrl.dollars}}</p>
+        </div>
+        <div class="well text-center">
+            <div class="row">
+            <div class="col-sm-3">
+                <h1>Quarters</h1>
+                <p id="quarters" class="lead">{{calCtrl.quarters}}</p>
+            </div>
+            <div class="col-sm-3">
+                <h1>Dimes</h1>
+                <p id="dimes" class="lead">{{calCtrl.dimes}}</p>
+            </div>
+            <div class="col-sm-3">
+                <h1>Nickels</h1>
+                <p id="nickels" class="lead">{{calCtrl.nickels}}</p>
+            </div>
+            <div class="col-sm-3">
+                <h1>Pennies</h1>
+                <p id="pennies" class="lead">{{calCtrl.pennies}}</p>
+            </div>
+            </div>
+        </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
